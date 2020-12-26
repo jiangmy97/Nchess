@@ -1,7 +1,7 @@
 Rules of Nchess
 ============================================
 
-Rule 0: New Chess is a self-made chess game that integrates chess, Chinese chess and Japanese shogi, invented by Cannon Jiang.
+Rule 0: Nchess is a self-made chess game that integrates chess, Chinese chess and Japanese shogi, invented by Cannon Jiang.
 
 ０｜１２３４５６７８９
 ：｜：：：：：：：：：
