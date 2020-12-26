@@ -1,54 +1,44 @@
-MATLAB Compiler
+Rules of Nchess
+============================================
 
-1. Prerequisites for Deployment 
+Rule 0: New Chess is a self-made chess game that integrates chess, Chinese chess and Japanese shogi, invented by Jiang Da Pao.
 
-. Verify the MATLAB Compiler Runtime (MCR) is installed and ensure you    
-  have installed version 8.3 (R2014a).   
+０｜１２３４５６７８９
+：｜：：：：：：：：：
+１｜ｃｎｍ＋ｇ＋ｍｎｃ
+２｜－ａ－－－－－ａ－
+３｜ｓ－ｓ－ｓ－ｓ－ｓ
+４｜－－－－－－－－－
+５｜～～～～～～～～～
+６｜－－－－－－－－－
+７｜Ｓ－Ｓ－Ｓ－Ｓ－Ｓ
+８｜－Ａ－－－－－Ａ－
+９｜ＣＮＭ＋Ｇ＋ＭＮＣ
 
-. If the MCR is not installed, do the following:
-  (1) enter
-  
-      >>mcrinstaller
-      
-      at MATLAB prompt. The MCRINSTALLER command displays the 
-      location of the MCR Installer.
+Rule 1: The game board has nine rows and nine columns. The initial arrangement of the pieces is shown above. There are a total of six types plus one type of promotion, and a total of fourteen chess pieces on the board. All chess pieces move in the same way as the way of capturing.
 
-  (2) run the MCR Installer.
+Rule 2: Starting from the upper left corner of the board, there are row and column coordinates [i j] to assist in recording the game and moving the pieces. To move the Soldier "S" from [i1 j1] to [i2 j2], you need to enter (record) as [S i1 j1 i2 j2].
 
-Or download the Windows 64-bit version of the MCR for R2014a 
-from the MathWorks Web site by navigating to
+Rule 3: Two players play in turns. Rows 1 to 3 are called "North", and the player is called "The North". Rows 6 to 9 are called "South", and the player is called "The South".
 
-   http://www.mathworks.com/products/compiler/mcr/index.html
-   
-   
-For more information about the MCR and the MCR Installer, see 
-Distribution to End Users in the MATLAB Compiler documentation  
-in the MathWorks Documentation Center.    
+Rule 4: The fifth line is the River Boundary (abbreviated as "RB", represented by "~"). A certain piece crosses the river boundary in two steps, namely, from one side to the river boundary in the first step, and from the river boundary to the other side in the next step. When the chess pieces move horizontally on the river boundary, they move one square at a time.
 
+Rule 5: There are 4 Prison Squares on the board (Prison Square, abbreviated as "PS", represented by "+"). [1 4] is the north 4 prisoners, [1 6] is the north 6 prisoners, [9 4] is the south 4 prisoners, and [9 6] is the south 6 prisoners. When one piece has been captured, the player can choose to imprison the piece in 4 or 6 cells. This step is recorded as [P i1 j1 i2 j2 PS].
 
-NOTE: You will need administrator rights to run MCRInstaller. 
+Rule 6: When a chess piece of one side's piece walks to the opponent's PS, all the pieces prisoned in this PS will be released and placed back on their own side of the chessboard.
 
+Rule 7: General (G, g) can walk one square in an orthogonal direction in one step. This chess piece can only move in the last three rows on its own side.
 
-2. Files to Deploy and Package
+Rule 8: Archer (A, a) can go orthogonally or diagonally up to three squares in one step. When crossing river boundaries, Rule 4 applies.
 
-Files to package for Standalone 
-================================
--nchess_ch.exe
--MCRInstaller.exe 
-   -if end users are unable to download the MCR using the above  
-    link, include it when building your component by clicking 
-    the "Add MCR" link in the Deployment Tool
--This readme file 
+Rule 9: Chariot (C, c) can go orthogonally for any distance in one step. When crossing river boundaries, Rule 4 applies.
 
-3. Definitions
+Rule 10: Knight (N, n) can go in an "L" shape in one step (i.e. two squares in the vertical direction and one in the horizontal direction; or two squares in the horizontal direction and one square in the vertical direction). This chess piece can directly cross the river boundary.
 
-For information on deployment terminology, go to 
-http://www.mathworks.com/help. Select MATLAB Compiler >   
-Getting Started > About Application Deployment > 
-Application Deployment Terms in the MathWorks Documentation 
-Center.
+Rule 11: Minister (M, m) can go diagonally for any distance in one step. When crossing river boundaries, Rule 4 applies.
 
+Rule 12: Soldier (S,s) can move one square forward or horizontally in one step.
 
+Rule 13: When Soldier (S,s) moves to the last line, he can be promoted to Officer (O, o). Officer can go one square in the orthogonal direction, like General.
 
-
-
+Rule 14: If either side captures the opponent's General, and the game is over.
