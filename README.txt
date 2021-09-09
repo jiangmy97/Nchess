@@ -21,7 +21,7 @@ Rule 2: Starting from the upper left corner of the board, there are row and colu
 
 Rule 3: Two players play in turns. Rows 1 to 3 are called "North", and the player is called "The North". Rows 6 to 9 are called "South", and the player is called "The South".
 
-Rule 4: The fifth line is the River Boundary (abbreviated as "RB", represented by "~"). A certain piece crosses the river boundary in two steps, namely, from one side to the river boundary in the first step, and from the river boundary to the other side in the next step. When the chess pieces move horizontally on the river boundary, they move one square at a time.
+Rule 4: The fifth row is the River Boundary (abbreviated as "RB", represented by "~"). A certain piece crosses the river boundary in two steps, namely, from one side to the river boundary in the first step, and from the river boundary to the other side in the next step. When the chess pieces move horizontally on the river boundary, they move one square at a time.
 
 Rule 5: There are 4 Prison Squares on the board (Prison Square, abbreviated as "PS", represented by "+"). [1 4] is the north 4th PS, [1 6] is the north 6th PS, [9 4] is the south 4th PS, and [9 6] is the south 6th PS. When one piece "P" has been captured, the player can choose to imprison the piece in 4 or 6 cells. This step is recorded as [P i1 j1 i2 j2 PS].
 
